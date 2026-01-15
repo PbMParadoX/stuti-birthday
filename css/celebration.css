@@ -1,0 +1,64 @@
+/* ================= CELEBRATION SCREEN ================= */
+
+#celebration-screen {
+    background: radial-gradient(circle at top,
+            #fff1f4,
+            #f7c6d7,
+            #fbd1c8);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Birthday Text */
+.birthday-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #b8326a;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+
+    animation: popIn 1.2s ease forwards;
+    text-shadow: 0 6px 20px rgba(184, 50, 106, 0.35);
+}
+
+.birthday-text span {
+    display: block;
+    margin-top: 8px;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #8c1d40;
+}
+
+/* Pop animation */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Confetti canvas */
+#confetti-canvas {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+    .birthday-text {
+        font-size: 1.8rem;
+    }
+
+    .birthday-text span {
+        font-size: 2.2rem;
+    }
+}

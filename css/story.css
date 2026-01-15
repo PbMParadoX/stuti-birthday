@@ -1,0 +1,262 @@
+/* ================= STORY INTRO ================= */
+
+#story-intro {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff1f4, #f7c6d7, #fbd1c8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.story-intro-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #8c1d40;
+    margin-bottom: 32px;
+    animation: fadeInStoryText 1.2s ease forwards;
+}
+
+@keyframes fadeInStoryText {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dancing arrow */
+.scroll-indicator {
+    font-size: 2rem;
+    color: #b8326a;
+    animation: danceArrow 1.4s infinite ease-in-out;
+    opacity: 0.9;
+}
+
+@keyframes danceArrow {
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+}
+
+/* ================= STORY CONTAINER ================= */
+
+#story-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ================= STORY SECTIONS ================= */
+
+.story-section {
+    min-height: 100vh;
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.story-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= STORY TEXT ================= */
+
+.story-text {
+    max-width: 520px;
+    text-align: center;
+}
+
+.story-text p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+    color: #3a1f28;
+    opacity: 0;
+    /* for stagger animation */
+}
+
+/* Highlighted emotional line */
+.story-text .highlight {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #b8326a;
+}
+
+/* Playful section */
+.story-section.playful p {
+    color: #6b1f3a;
+}
+
+/* Final section */
+.story-section.final {
+    background: linear-gradient(135deg, #fdecef, #f7c6d7, #fbd1c8);
+}
+
+.signature {
+    margin-top: 18px;
+    font-weight: 600;
+    color: #8c1d40;
+}
+
+.sign-off {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+}
+
+/* ================= BOY & GIRL VISUALS ================= */
+
+.story-visual {
+    display: flex;
+    gap: 24px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.boy,
+.girl {
+    width: 90px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Girl starts blurred */
+.girl {
+    filter: blur(6px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        filter 1.2s ease;
+}
+
+/* Girl becomes clear */
+.girl.revealed {
+    filter: blur(0);
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+.hearts-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.heart {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #f472b6;
+    transform: rotate(45deg);
+    opacity: 0.8;
+    animation: floatUp 4s ease-in forwards;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #f472b6;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -7px;
+    left: 0;
+}
+
+.heart::after {
+    left: -7px;
+    top: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(45deg) scale(1);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(-140px) rotate(45deg) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* ================= BACKGROUND THEMES ================= */
+
+body {
+    transition: background 1.2s ease;
+}
+
+.bg-soft-pink {
+    background: linear-gradient(135deg, #fff1f4, #fdecef);
+}
+
+.bg-peach {
+    background: linear-gradient(135deg, #fbd1c8, #fdecef);
+}
+
+.bg-lavender {
+    background: linear-gradient(135deg, #f3e8ff, #fdecef);
+}
+
+.bg-warm {
+    background: linear-gradient(135deg, #f7c6d7, #fbd1c8);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+    .story-text p {
+        font-size: 1rem;
+    }
+
+    .story-intro-text {
+        font-size: 1.5rem;
+    }
+
+    .boy,
+    .girl {
+        width: 70px;
+    }
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Stuti ❤️</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/curtain.css">
+    <link rel="stylesheet" href="css/cake.css">
+    <link rel="stylesheet" href="css/celebration.css">
+    <link rel="stylesheet" href="css/story.css">
+</head>
+
+<body class="no-scroll">
+
+    <!-- ================= COUNTDOWN SCREEN ================= -->
+    <section id="countdown-screen" class="screen active">
+        <div class="countdown-card">
+            <p class="subtitle">Something beautiful is about to begin …</p>
+            <div id="countdown-timer">
+                <span id="hh">00</span> :
+                <span id="mm">00</span> :
+                <span id="ss">00</span>
+            </div>
+            <p class="footer-text">For someone who means the world to me 🌏</p>
+        </div>
+    </section>
+
+    <!-- ================= CURTAIN SCREEN ================= -->
+    <section id="curtain-screen" class="screen hidden">
+        <div class="curtain left"></div>
+        <div class="curtain right"></div>
+
+        <div class="curtain-content">
+            <p>A moment just for you…</p>
+            <button id="open-curtain-btn">Open</button>
+        </div>
+    </section>
+
+    <!-- ================= CAKE & 24 CANDLES ================= -->
+    <section id="cake-screen" class="screen hidden">
+        <div class="cake-wrapper">
+
+            <!-- 24 Candles (Centered) -->
+            <div class="candles">
+                <!-- Row 1 -->
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+
+            <!-- Cake -->
+            <img src="assets/images/cake.png" alt="Cake" class="cake">
+
+            <!-- Meaning Text -->
+            <p id="candle-text" class="hidden">
+                24 candles for 24 beautiful years ✨
+            </p>
+
+            <!-- Action Button -->
+            <button id="blow-candle-btn">Blow the candles</button>
+            <button id="wish-made-btn" class="hidden">
+                Wish made ❤️
+            </button>
+            
+        </div>
+    </section>
+
+    <!-- ================= CELEBRATION ================= -->
+    <section id="celebration-screen" class="screen hidden">
+        <h1 class="birthday-text">
+            🎂 HAPPY BIRTHDAY 🎂 <br />
+            <span>Ms. STUTI SINHA 😍</span>
+        </h1>
+        <canvas id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- ================= STORY INTRO ================= -->
+    <section id="story-intro" class="screen hidden">
+        <p class="story-intro-text">Let me tell you our story …</p>
+        <span class="scroll-indicator">↓</span>
+    </section>
+
+    <!-- ================= STORY SCROLL ================= -->
+    <main id="story-container">
+    
+        <!-- ================= CHAPTER 1 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>I met you during my college days,</p>
+                <p>when my life was getting a little too complex.</p>
+            </div>
+            <div class="story-visual">
+                <img src="assets/images/boy.png" alt="Happy" class="boy">
+                <img src="assets/images/girl.png" alt="Stuti" class="girl blurred">
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 2 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>You appeared like a mysterious box,</p>
+                <p>and the more I tried to unbox it,</p>
+                <p>the more mysterious you became.</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 3 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>After many sorrys,</p>
+                <p>many no, many not possible…</p>
+                <p class="highlight">You finally said yes.</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 4 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>That moment still hovers in my mind,</p>
+                <p>as clearly as it did that day.</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 5 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>Slowly, everything started</p>
+                <p>falling into place.</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 6 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>Our bond grew stronger,</p>
+                <p>day by day.</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 7 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>And here we are,</p>
+                <p>after more than three beautiful years together.</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 8 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>Sometimes I stop and think,</p>
+                <p>how special you truly are.</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 9 ================= -->
+        <section class="story-section playful">
+            <div class="story-text">
+                <p>And how lucky I am,</p>
+                <p>that you were born.</p>
+                <p class="small">(Obviously… thanks to your parents 😄)</p>
+            </div>
+        </section>
+    
+        <!-- ================= CHAPTER 10 ================= -->
+        <section class="story-section">
+            <div class="story-text">
+                <p>On your special day,</p>
+                <p>I pray, wish, demand —</p>
+                <p>that you succeed wherever life takes you.</p>
+            </div>
+        </section>
+    
+        <!-- ================= FINAL CHAPTER ================= -->
+        <section class="story-section final">
+            <div class="story-text">
+                <p>I will always be your backbone.</p>
+                <p class="signature">Happy Birthday, Stuti.</p>
+                <p class="sign-off">— Happy ❤️</p>
+            </div>
+        </section>
+    
+    </main>
+
+    <!-- ================= JS ================= -->
+    <script src="js/config.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/curtain.js"></script>
+    <script src="js/cake.js"></script>
+    <script src="js/celebration.js"></script>
+    <script src="js/storyScroll.js"></script>
+    <script src="js/disableInspect.js"></script>
+
+</body>
+
+</html>

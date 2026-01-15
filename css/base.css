@@ -1,0 +1,164 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2d1b1b;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    overflow-x: hidden;
+
+    /* Default background */
+    background: linear-gradient(135deg,
+            #fdecef,
+            #f7c6d7,
+            #fbd1c8);
+}
+
+/* ================= GOOGLE FONT HEADINGS ================= */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #8c1d40;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+/* ================= TEXT ================= */
+
+p {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #3a1f28;
+}
+
+/* Text selection */
+::selection {
+    background: #f7a8b8;
+    color: #ffffff;
+}
+
+/* ================= SCROLL CONTROL ================= */
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+body.allow-scroll {
+    overflow-y: auto;
+    height: auto;
+}
+
+/* ================= SCREEN LAYOUT ================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.active {
+    display: flex;
+}
+
+/* ================= BUTTON ================= */
+
+button {
+    background: linear-gradient(135deg, #f7a8b8, #f5c97b);
+    border: none;
+    border-radius: 30px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2d1b1b;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+/* ================= UTILITY ================= */
+
+.center {
+    text-align: center;
+}
+
+/* Fade animation (used across screens) */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= MOBILE TYPOGRAPHY ================= */
+
+@media (max-width: 480px) {
+    body {
+        line-height: 1.65;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    button {
+        padding: 12px 26px;
+        font-size: 0.95rem;
+    }
+}
