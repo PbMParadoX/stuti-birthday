@@ -6,7 +6,7 @@ const TARGET_DATE = {
   month: 0,        // January = 0
   day: 15,
   hour: 23,
-  minute: 0,
+  minute: 5,
   second: 0
   // hour: new Date().getHours(),
   // minute: new Date().getMinutes(),
@@ -21,4 +21,5 @@ const CONFIG = {
   autoRevealIfPassed: true,
   debug: false
 };
+
 
